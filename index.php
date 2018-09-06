@@ -8,13 +8,6 @@ include 'Autoload.php';
 // com mais liberdade
 session_start();
 
-if (!empty($_SESSION['session_id'])) {
-	if (session_id() != $_SESSION['session_id']) {
-		session_destroy();
-		session_start();
-		$_SESSION['session_id'] = session_id();
-	}
-}
 
 // Testa se o diretorio solicitado por $_GET['path'] NAO EXISTE
 // Se a condicao for verdadeira ele mostra um erro de not found
@@ -30,7 +23,7 @@ if (!empty($_GET['path']) and
 	echo 'Error 404 - Not found';
 } else {
     // Se nada for informado na $_GET['path'], o path padrao é 'login' pois é a pagina inicial padrao
-	$path = empty($_GET['path']) ? 'login' : $_GET['path'];
+	$path = empty($_GET['path']) ? 'usuario/login' : $_GET['path'];
 
     // Cria array com dois indices, um é o arquivo de processamento(caso seja solicitado um processamento)
     // e o outro é o arquivo de view.

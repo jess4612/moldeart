@@ -10,7 +10,7 @@ include RAIZ . '/views/_includes/header.php';
 include RAIZ . '/views/_includes/cabecalho_inicio.php';
 
 // Incluir form de login
-include RAIZ . '/views/login/view.php';
+include RAIZ . '/views/usuario/login/view.php';
 
 // Incluir footer default
 include RAIZ . '/views/_includes/footer.php';
