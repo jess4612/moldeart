@@ -29,7 +29,7 @@ if (isset($_POST['email']) and isset($_POST['senha'])) {
 		// É feita a definicao da query e em seguida a configuracao das variaveis
 		// Vou te explicar separadamente na escola pra vc conseguir usar com maior liberdade, essa
 		// parte é simples
-		$query = 'SELECT * FROM CADASTROUSUARIO WHERE EMAIL = @emailVAR AND SENHA = @senhaVAR';
+		$query = 'SELECT * FROM cadastrousuario WHERE EMAIL = @emailVAR AND SENHA = @senhaVAR';
 		$vars = array(
 			'@emailVAR' => $emailLog,
 			'@senhaVAR' => $senhaLog

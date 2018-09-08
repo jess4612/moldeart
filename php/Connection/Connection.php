@@ -67,6 +67,7 @@ class Connection extends BasicConnection
 
         // echo '<pre>';
         // echo str_replace('\n', '<br>', $query) . '<br>';
+        // exit();
         $return = $this->execute($query, $isSelect);
 
         $this->close();
