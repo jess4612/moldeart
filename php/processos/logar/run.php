@@ -48,7 +48,7 @@ if (isset($_POST['email']) and isset($_POST['senha'])) {
 		$_SESSION['error'] = 'Usuário ou senha incorretos.';
 		header('Location: ' . INDEX);
 	} else {
-		$_SESSION['usertada'] = $userData;
+		$_SESSION['userdata'] = $userData;
 		header('Location: ' . INDEX . '/home');
 	}
 } else {

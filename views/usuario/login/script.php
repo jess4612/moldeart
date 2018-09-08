@@ -2,6 +2,11 @@
 // Pro usuario nao fazer merda no seu sistema
 if (!defined('RAIZ')) exit();
 
+if (!empty($_SESSION['userdata'])) {
+    header('Location: ' . INDEX . '/home');
+    exit();
+}
+
 $title = 'Login - Molde Art';
 $background = 'url(' . URL_IMG . '/background/026.jpg)';
 
