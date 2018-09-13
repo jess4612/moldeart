@@ -3,7 +3,7 @@
 if (!defined('RAIZ')) exit();
 
 if (!empty($_SESSION['userdata'])) {
-    header('Location: ' . INDEX . '/home');
+    header('Location: ' . INDEX);
     exit();
 }
 

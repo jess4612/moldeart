@@ -11,5 +11,7 @@
 			$('.carousel').carousel();
 		});
 	</script>
+	
+<script type='text/javascript' src='<?=URL_VIEWS?>/_javascript/jfunctions.js'></script>
 </body>
 </html>

@@ -30,7 +30,7 @@ div.input-field label {
 						<label style='color: #FFF59D'>Senha:</label>
 					</div>
 					<div class='input-field col s6'>
-						<input type='password' name='senhaDiferente' class='validate' required>
+						<input type='password' name='confirmaSenha' class='validate' required>
 						<label style='color: #FFF59D'>Digite a senha novamente:</label>
 					</div>
 					<div class='col s8 push-s2'>

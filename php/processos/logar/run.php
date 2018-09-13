@@ -3,6 +3,7 @@
 // vou te explicar separadamente junto com a classe Autoload.php (isso é um pouco mais complexo
 // e seu entendimento nao é taaao necessario pra vc conseguir fazer seu projeto, mas é interessante)
 use Connection\Connection;
+use Classes\Usuario;
 
 // Instanciado objeto de conexao com o banco de dados
 $connection = new Connection('moldearts');
@@ -48,7 +49,7 @@ if (isset($_POST['email']) and isset($_POST['senha'])) {
 		$_SESSION['error'] = 'Usuário ou senha incorretos.';
 		header('Location: ' . INDEX);
 	} else {
-		$_SESSION['userdata'] = $userData;
+		$_SESSION['userdata'] = new Usuario($userData['NOME'], $userData['SOBRENOME'], $userData['EMAIL']);
 		header('Location: ' . INDEX . '/home');
 	}
 } else {

@@ -1,14 +1,4 @@
 <?php if (!defined('RAIZ')) exit(); ?>
-<!-- Arrumar heights de itens do menu -->
-<style type="text/css">
-  .nav-wrapper,
-  .nav-wrapper a,
-  .nav-wrapper div {
-    height: 64px;
-    overflow: hidden;
-  }
-</style>
-
 <nav class='row' style='background : rgb(139,69,19); margin: 0; height: 8em !important; padding-top: 1em'>
   <a href="<?=INDEX?>/home" class="brand-logo left"><img class='col s6 l4' src="<?=URL_IMG?>/logo/molde.png"></a>
 
@@ -16,8 +6,8 @@
     <div class="right right-align col l3">
       <div class="row" style="margin-bottom: none">
         <div class="col s8 hide-on-med-and-down">
-          <label class="flow-text white-text truncate col s12">NomeNomeNomeNomeNome</label> <br>
-          <span class="col s12" style="margin-top: -30px">email@email.com</span>
+          <label class="flow-text white-text truncate col s12"><?=$_SESSION['userdata']->getNome()?></label> <br>
+          <span class="col s12" style="margin-top: -30px"><?=$_SESSION['userdata']->getEmail()?></span>
         </div>
         <i class="fas fa-user-circle fa-6x black-text col l4 right"></i>
       </div>
@@ -39,13 +29,12 @@
       <li><a href="<?=INDEX?>/home/social">Molde Social</a></li>
     </ul>
 
-    <!--  --> 
+    <!-- ícones tela home  --> 
     <div class="right">
       <a href="<?=INDEX?>/" style="padding: 0 5px;"><i class="fas fa-dollar-sign"></i></a>
-      <a href="<?=INDEX?>/" style="padding: 0 5px;"><i class="fas fa-pencil-alt"></i></a>
+      <a href="<?=INDEX?>/home/projeto/cadastro" style="padding: 0 5px;"><i class="fas fa-pencil-alt"></i></a>
       <a href="<?=INDEX?>/" style="padding: 0 5px;"><i class="fas fa-envelope"></i></a>
-      <a href="<?=INDEX?>/" style="padding: 0 5px;"><i class="fas fa-search"></i></a>
-      <a href="<?=INDEX?>/logout" style="padding: 0 5px;"><i class="fas fa-power-off"></i></a>
+      <a href="" style="padding: 0 5px;"><i class="fas fa-search"></i></a>
     </div>
   </div>
 

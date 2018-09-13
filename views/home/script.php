@@ -1,6 +1,11 @@
 <?php
 if (!defined('RAIZ')) exit();
 
+if (empty($_SESSION['userdata'])) {
+    header('Location: ' . INDEX . '/home');
+    exit();
+}
+
 //Atribuir valores especificos
 $title = 'Home - Molde Art';
 $background = 'rgb(245,222,179)';
