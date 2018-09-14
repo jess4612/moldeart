@@ -19,5 +19,9 @@ main {
 	font-size: 1em !important;
 }
 
+/* Para o height dos elementos em um navbar não exceder o height da navbar */
+nav i {
+    height: 40px;
+}
 
 
