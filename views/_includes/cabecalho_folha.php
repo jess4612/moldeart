@@ -35,6 +35,7 @@
       <a href="<?=INDEX?>/home/projeto/cadastro" style="padding: 0 5px;"><i class="fas fa-pencil-alt"></i></a>
       <a href="<?=INDEX?>/" style="padding: 0 5px;"><i class="fas fa-envelope"></i></a>
       <a href="" style="padding: 0 5px;"><i class="fas fa-search"></i></a>
+      <a href="<?=INDEX?>/logout" style="padding: 0 5px;"><i class="fas fa-power-off"></i></a>
     </div>
   </div>
 
