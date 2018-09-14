@@ -10,6 +10,8 @@ $(document).ready(function () {
 
 		$('#produtos').css("cursor", "default");
 		$('#tutoriais').css("cursor", "pointer");
+
+		$('.carousel').carousel();
 	});
 
 	$('#tutoriais').click(function () {
@@ -21,5 +23,7 @@ $(document).ready(function () {
 
 		$('#produtos').css("cursor", "pointer");
 		$('#tutoriais').css("cursor", "default");
+
+		$('.carousel').carousel();
 	});
 });
