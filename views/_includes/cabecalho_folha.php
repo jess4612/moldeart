@@ -5,11 +5,13 @@
   <div class="row">
     <div class="right right-align col l3">
       <div class="row" style="margin-bottom: none">
-        <div class="col s8 hide-on-med-and-down">
-          <label class="flow-text white-text truncate col s12"><?=$_SESSION['userdata']->getNome()?></label> <br>
-          <span class="col s12" style="margin-top: -30px"><?=$_SESSION['userdata']->getEmail()?></span>
-        </div>
-        <i class="fas fa-user-circle fa-6x black-text col l4 right"></i>
+        <a href="<?=INDEX?>/home/perfil">
+          <div class="col s8 hide-on-med-and-down">
+            <label class="flow-text white-text truncate col s12"><?=$_SESSION['userdata']->getNome()?></label> <br>
+            <span class="col s12" style="margin-top: -30px"><?=$_SESSION['userdata']->getEmail()?></span>
+          </div>
+          <i class="fas fa-user-circle fa-6x black-text col l4 right"></i>  
+        </a>
       </div>
     </div>
   </div>

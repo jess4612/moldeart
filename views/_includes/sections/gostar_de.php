@@ -8,6 +8,7 @@
 	</div>
 
 	<!-- Paranauês de seleção através da buscas de cada usuario -->
+	
 	<div class="carousel">
 		<a class="carousel-item" href="#">
 			<div class="card" style="background-color: rgb(202,164,115);">
