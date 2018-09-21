@@ -32,7 +32,7 @@ if (!empty($nome) and !empty($sobrenome) and !empty($email) and !empty($senha) a
 	elseif ($confirmaSenha != $senha) {
 		$msg = 'As senhas não coincidem!';
 	} else{
-		$usuario = new Usuario($nome, $sobrenome, $email, $senha);
+		$usuario = new Usuario($nome, $sobrenome, $email, md5($senha));
 		$msg = $usuario->cadastrar();
 	}
 
@@ -41,4 +41,4 @@ if (!empty($nome) and !empty($sobrenome) and !empty($email) and !empty($senha) a
 }
 
 $_SESSION['msg'] = $msg;
-header('Location: ' . INDEX);
+header('Location: ' . INDEX . '/usuario/cadastro');

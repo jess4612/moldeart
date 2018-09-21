@@ -28,8 +28,14 @@ class Usuario
 		try {
 			$con = new Connection('moldearts');
 
-			$query = 'SELECT EMAIL FROM CADASTROUSUARIO WHERE EMAIL = @emailVAR';
-			
+			$query = 'SELECT EMAIL FROM cadastrousuario WHERE EMAIL = @emailVAR';
+			$vars = array('@emailVAR' => $this->email);
+
+			$emailJaCadastrado = $con->dbExec($query, $vars);
+			if ($emailJaCadastrado) {
+				return 'Este email já está em uso, tente novamente.';
+			}
+
 			
 			$query = 'insert into cadastrousuario(NOME, SOBRENOME, EMAIL, SENHA) ';
 			$query .= 'VALUES (@nomeVAR, @sobrenomeVAR, @emailVAR, @senhaVAR)';
@@ -41,6 +47,7 @@ class Usuario
 				'@senhaVAR' => $this->senha
 			);
 			$con->dbExec($query,$vars);
+			return 'Obrigado por se cadastrar!';
 		} catch (Exception $e) {
 			echo $e;
 			return 'Erro interno. Contate o suporte.';

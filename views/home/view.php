@@ -13,6 +13,10 @@
 	.carousel {
 		height: 250px;
 	}
+
+	a.flow-text.blue-text.right {
+		cursor: pointer;
+	}
 	@media only screen and (min-width: 1024px) {
 		.card .card-content {
 			padding: 10px;
