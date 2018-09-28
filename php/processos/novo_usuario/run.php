@@ -10,7 +10,12 @@ $email = $_POST['email'];
 $senha = $_POST['senha'];
 $confirmaSenha = $_POST['confirmaSenha'];
 
-if (!empty($nome) and !empty($sobrenome) and !empty($email) and !empty($senha) and !empty($confirmaSenha)) {
+if (!empty($nome) and 
+    !empty($sobrenome) and 
+    !empty($email) and 
+    !empty($senha) and 
+    !empty($confirmaSenha)
+) {
 
 	//Nome: Não pode conter múmeros, nem cacteres especiais, não conter espaços, iniciar com uma letra maiuscula;
 	if (is_numeric($nome)) {
