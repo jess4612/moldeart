@@ -21,20 +21,20 @@
     <div class="nav-content row">
         <i class="fas fa-bars hide-on-large-only dropdown-trigger" data-constrainwidth="false" data-activates="dropdown1" style="margin-left: 1em;"></i>
         <ul class="hide-on-med-and-down">
-            <li><a class="active" href="<?=INDEX?>/home/suporte"> <i class="fas fa-question-circle"></i>  Quem somos/Suporte</a></li>
-            <li><a href="<?=INDEX?>/home/empresarial"><i class="fas fa-suitcase"></i> Orientações empresariais</a></li>
-            <li><a href="<?=INDEX?>/home/social"><i class="fab fa-stack-exchange"></i>  Molde Social</a></li>
+            <li><a class="active" href="<?=INDEX?>/home/suporte"> <i class="fas fa-question-circle"></i>  <span>Quem somos/Suporte</span></a></li>
+            <li><a href="<?=INDEX?>/home/empresarial"><i class="fas fa-suitcase"></i> <span>Orientações empresariais</span></a></li>
+            <li><a href="<?=INDEX?>/home/social"><i class="fab fa-stack-exchange"></i>  <span>Molde Social</span></a></li>
         </ul>
         <ul class="dropdown-content" id="dropdown1">
-            <li><a class="active" href="<?=INDEX?>/home/suporte">Quem somos/Suporte</a></li>
-            <li><a href="<?=INDEX?>/home/empresarial">Orientações empresariais</a></li>
-            <li><a href="<?=INDEX?>/home/social">Molde Social</a></li>
-        </ul>
+            <li><a class="active" href="<?=INDEX?>/home/suporte"><span>Quem somos/Suporte</span></a></li>
+            <li><a href="<?=INDEX?>/home/empresarial"><span>Orientações empresariais</span></a></li>
+            <li><a href="<?=INDEX?>/home/social"><span>Molde Social</span></a></li>
+        </ul> 
 
         <!-- ícones tela home  --> 
         <div class="right">
-            <a href="<?=INDEX?>/" style="padding: 0 5px;"><i class="fas fa-dollar-sign"></i></a>
-            <a href="<?=INDEX?>/home/projeto/cadastro" style="padding: 0 5px;"><i class="fas fa-pencil-alt"></i></a>
+            <a href="<?=INDEX?>/projeto/venda" style="padding: 0 5px;"><i class="fas fa-dollar-sign"></i></a>
+            <a href="<?=INDEX?>/projeto/cadastro" style="padding: 0 5px;"><i class="fas fa-pencil-alt"></i></a>
             <a href="<?=INDEX?>/" style="padding: 0 5px;"><i class="fas fa-envelope"></i></a>
             <a href="" style="padding: 0 5px;"><i class="fas fa-search"></i></a>
             <a href="<?=INDEX?>/logout" style="padding: 0 5px;"><i class="fas fa-power-off"></i></a>
