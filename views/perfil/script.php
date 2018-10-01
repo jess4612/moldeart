@@ -3,7 +3,7 @@ if (!defined('RAIZ')) exit();
 
 //declarar title e BG
 $title = 'Cadastro Porjetos - Molde Art';
-$backgound = '<imgBG>';
+$background = '<imgBG>';
 
 //incluir defaults
 include RAIZ . '/views/_includes/header.php';

@@ -15,7 +15,7 @@ form .input-field label {
                 <label style='font-size: 1.2em;'>Editar foto</label><br><br><br>
             </div>
         </div>
-        <div class="col l4 left" style="margin-bottom: 1em; margin-left: 0em;">
+        <div class="col l4 left" style="margin-bottom: 1em;">
           <form class="row " name="editar_perfil" method="POST" action="<link do fomulario de acesso ao BD>">
 
             <div class="input-field col s9">
