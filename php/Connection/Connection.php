@@ -47,7 +47,7 @@ class Connection extends BasicConnection
      * @access public
      * @return void
      */
-    public function dbExec(string $query, array $vars = null) {
+    public function dbExec(string $query, array $vars = null, $show = false) {
         $this->connect();
         $query = $this->escapeString($query);
         $vars = $vars ? $this->escapeString($vars) : '';
@@ -65,9 +65,12 @@ class Connection extends BasicConnection
             $isSelect = true;
         }
 
-        // echo '<pre>';
-        // echo str_replace('\n', '<br>', $query) . '<br>';
-        // exit();
+        if ($show) {
+            echo '<pre>';
+            echo str_replace('\n', '<br>', $query) . '<br>';
+            exit();
+        }
+
         $return = $this->execute($query, $isSelect);
 
         $this->close();

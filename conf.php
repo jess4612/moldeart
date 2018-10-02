@@ -22,3 +22,4 @@ define('URL_IMG', INDEX . '/views/_img');
 define('PATH_VIEWS', RAIZ . '/views');
 
 define('PATH_SECTIONS', PATH_VIEWS . '/_includes/sections');
+define('PATH_MODALS', PATH_VIEWS . '/_includes/modals');

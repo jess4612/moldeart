@@ -6,7 +6,7 @@ use Connection\Connection;
 use Classes\Usuario;
 
 // Instanciado objeto de conexao com o banco de dados
-$connection = new Connection('moldearts');
+$connection = new Connection('MoldeArt');
 
 // Inicio da validacao, testa se email e senha foram informados
 if (isset($_POST['email']) and isset($_POST['senha'])) {
@@ -30,7 +30,7 @@ if (isset($_POST['email']) and isset($_POST['senha'])) {
 		// É feita a definicao da query e em seguida a configuracao das variaveis
 		// Vou te explicar separadamente na escola pra vc conseguir usar com maior liberdade, essa
 		// parte é simples
-		$query = 'SELECT * FROM cadastrousuario WHERE EMAIL = @emailVAR AND SENHA = @senhaVAR';
+		$query = 'SELECT * FROM E_Usuario WHERE USU_EMAIL = @emailVAR AND USU_SENHA = @senhaVAR';
 		$vars = array(
 			'@emailVAR' => $emailLog,
 			'@senhaVAR' => $senhaLog
@@ -49,7 +49,9 @@ if (isset($_POST['email']) and isset($_POST['senha'])) {
 		$_SESSION['error'] = 'Usuário ou senha incorretos.';
 		header('Location: ' . INDEX);
 	} else {
-		$_SESSION['userdata'] = new Usuario($userData['NOME'], $userData['SOBRENOME'], $userData['EMAIL']);
+		$_SESSION['userdata'] = new Usuario($userData['USU_NOME'], $userData['USU_SOBRENOME'], $userData['USU_EMAIL']);
+		$_SESSION['userdata']->setCod($userData['USU_COD']);
+		$_SESSION['userdata']->setImage($userData['USU_IMAGEM']);
 		header('Location: ' . INDEX . '/home');
 	}
 } else {

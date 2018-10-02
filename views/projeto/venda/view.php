@@ -4,7 +4,7 @@
     <form class="row " name="cadastrar_perfil" method="POST" action="" id="" enctype="multipart/form-data" style="margin: 0">
         <div class="col l8" style="margin-bottom: 1em; margin-left: 0em;">
             <div class="row container" style="margin: auto;">
-                <h5 class="">Cadastrar Projeto</h5>
+                <h5 class="">Vender Produto</h5>
 
                 <div class="input-field col s12">
                     <input type='text' name='nome' class='validate' value="" required style="border-color: rgb(139,69,19)">
@@ -12,17 +12,33 @@
                 </div>
 
                 <div class="input-field col s12">
-                    <input type="text" name='categoria' class='validate' value="" required style="border-color: rgb(139,69,19)">
-                    <label style='font-size: 1.2em; color: rgb(139,69,19);'>Categoria:</label><br>
+                    <input type="text" name='descricao' class='validate' value="" required style="border-color: rgb(139,69,19)">
+                    <label style='font-size: 1.2em; color: rgb(139,69,19);'>Descrição do produto:</label><br>
+                </div>
+
+                <div class="input-field col s12">
+                    <input type="text" name='preco' class='validate' value="" required style="border-color: rgb(139,69,19)">
+                    <label style='font-size: 1.2em; color: rgb(139,69,19);'>Preço:</label><br>
+                </div>
+
+                <div class="input-field col s12">
+                    <input type="text" name='descricao' class='validate' value="" required style="border-color: rgb(139,69,19)">
+                    <label style='font-size: 1.2em; color: rgb(139,69,19);'>Descrição do produto:</label><br>
                 </div>
 
                 <div class="input-field col s12" >
-                    <textarea name="passo_a_passo" class="materialize-textarea" class="validate" required style="border-color: rgb(139,69,19)"></textarea>
-                    <label style="color: rgb(139,69,19);">Passo-a-passo:</label> 
+                    <textarea name="preco" class="materialize-textarea" class="validate" required style="border-color: rgb(139,69,19)"></textarea>
+                    <label style="color: rgb(139,69,19);">Preço:</label> 
+                </div>
+
+                <div class="input-field col s12">
+                    <input type="number" name='quantidade' class='validate' value="" required style="border-color: rgb(139,69,19)">
+                    <label style='font-size: 1.2em; color: rgb(139,69,19);'>Quantidade:</label><br>
                 </div>
 
                 <div class="input-field col s12" >
-                    <textarea name="tags" class="materialize-textarea" class="validate" required style="border-color: rgb(139,69,19)"></textarea>
+                    <input type="text" name="tags">
+                   <!--  <textarea name="tags" class="materialize-textarea" class="validate" required style="border-color: rgb(139,69,19)"></textarea> -->
                     <label style="color: rgb(139,69,19);">Tags:</label> 
                 </div>
 
@@ -37,6 +53,5 @@
                 <a class="btn col s6 modal-trigger" style="background: rgba(139,69,19,0.7); margin-bottom: 2em" href="">
                     Cadastrar
                 </a>
-
             </form>
         </section>
