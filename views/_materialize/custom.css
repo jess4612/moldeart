@@ -27,7 +27,10 @@ nav ul li a span {
     font-size: 1.2em;
 }
 
-input,
-textarea {
+.input-field input,
+.input-field textarea,
+select {
     font-size: 1.4em !important;
+    border-color: rgb(139,69,19) !important;
+    color: rgb(139,69,19);
 }

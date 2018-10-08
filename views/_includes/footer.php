@@ -7,6 +7,7 @@
 			$('.dropdown-trigger').dropdown();
 			$('.carousel').carousel();
 			$('.modal').modal();
+			$('select').material_select();
 		});
 
 		// Preview de imagens
