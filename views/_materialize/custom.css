@@ -37,10 +37,12 @@ nav ul li a span {
     font-size: 1.2em;
 }
 
-input,
-textarea {
+.input-field input,
+.input-field textarea,
+select {
     font-size: 1.4em !important;
     border-color: rgb(139,69,19) !important;
+<<<<<<< HEAD
 }
 
 /* Cores */
@@ -59,4 +61,7 @@ figure:hover .molde-brown {
 button.cleared {
     background: none;
     border: none;
+=======
+    color: rgb(139,69,19);
+>>>>>>> 9c6083628ea5f8e7e2886cfacd65f84d0eebd27f
 }
