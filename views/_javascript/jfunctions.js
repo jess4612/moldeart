@@ -27,3 +27,7 @@ $(document).ready(function () {
 		$('.carousel').carousel();
 	});
 });
+
+function inputFigure(id) {
+	document.getElementById(id).click();
+}
