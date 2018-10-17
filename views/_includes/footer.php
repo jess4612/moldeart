@@ -7,11 +7,8 @@
 			$('.dropdown-trigger').dropdown();
 			$('.carousel').carousel();
 			$('.modal').modal();
-<<<<<<< HEAD
 			$('.tooltipped').tooltip();
-=======
 			$('select').material_select();
->>>>>>> 9c6083628ea5f8e7e2886cfacd65f84d0eebd27f
 		});
 
 		// Preview de imagens

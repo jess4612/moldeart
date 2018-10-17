@@ -31,9 +31,8 @@
             <li><a href="<?=INDEX?>/home/empresarial"><span>Orientações empresariais</span></a></li>
             <li><a href="<?=INDEX?>/home/social"><span>Molde Social</span></a></li>
             <li><a href="<?=INDEX?>/projeto/meus_projetos"><span>Meus projetos</span></a></li>
-        </ul> 
-
-<<<<<<< HEAD
+        </ul>
+        
         <!-- ícones tela home  --> 
         <div class="right">
             <a href="<?=INDEX?>/projeto/venda" style="padding: 0 5px;"><i class="fas fa-dollar-sign"></i></a>
@@ -44,15 +43,3 @@
         </div>
     </div>
 </nav>
-=======
-    <!-- ícones tela home  --> 
-    <div class="right">
-      <a href="<?=INDEX?>/projeto/venda" style="padding: 0 5px;"><i class="fas fa-dollar-sign"></i></a>
-      <a href="<?=
-INDEX?>/projeto/cadastro" style="padding: 0 5px;"><i class="fas fa-pencil-alt"></i></a>
-      <a href="<?=INDEX?>/" style="padding: 0 5px;"><i class="fas fa-envelope"></i></a>
-      <a href="" style="padding: 0 5px;"><i class="fas fa-search"></i></a>
-      <a href="<?=INDEX?>/logout" style="padding: 0 5px;"><i class="fas fa-power-off"></i></a>
-
-</nav>
->>>>>>> 9c6083628ea5f8e7e2886cfacd65f84d0eebd27f

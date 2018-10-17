@@ -106,6 +106,7 @@ $(function () {
                 success: function (data) {
                     $(el).css('display', 'none');
                     $('#containerNovoProjeto').append(data);
+                    $('#saveProject').css('display', 'block');
                     inSubmit = false;
                     // $('#messageContent').text(data);
                     // $('#messageModal').modal('open');
@@ -184,6 +185,8 @@ $(function () {
         var obj = this;
         var form = $(obj);
 
+        var dados = new FormData(document.getElementById('novoPasso'));
+
         if (!inSubmit) {
             // Enviar dados
             $.ajax({
@@ -198,6 +201,7 @@ $(function () {
                 },
 
                 url: form.attr('action'),
+                data: dados,
                 type: 'post',
                 cache: false,
                 processData: false,

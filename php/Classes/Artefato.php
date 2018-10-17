@@ -187,6 +187,14 @@ class Artefato
     public function save()
     {
         try {
+            // Mover imagens
+            foreach ($this->passos as $key => $passo) {
+                unset($this->passos[$key]['image']);
+                $up = PATH_VIEWS . '/_upload/';
+                copy("{$up}/tmp/{$passo['nomeImg']}", "{$up}/{$passo['nomeImg']}");
+            }
+
+            // Salvar no banco de dados
             $con = new Connection('MoldeArt');
 
             $query = 'INSERT INTO E_Artefato(ART_NOME, ART_CATEGORIA, ART_IMAGEM, ART_TUTORIAL, ART_DATA, ART_TAGS, ART_DESCRICAO, USU_COD)';
