@@ -7,13 +7,16 @@ margin-top: 0.5em; padding: 1em 2em">
 		<img class="activator" src="<?=INDEX?>/views/_img/categorias/festaJunina/Mesa.jpg">
 	</div>
 	<div class="card-content">
-		<span class="card-title activator grey-text text-darken-4 center-align">Festa Junina
-		<!--<i class="material-icons right">..</i></span>
-		<p><a href="#"></a></p>-->
+		<a href='<?=INDEX?>/produto'>
+			<span class="card-title activator grey-text text-darken-4 center-align">Festa Junina
+			<!--<i class="material-icons right">..</i></span>
+			<p><a href="#"></a></p>-->
+		</a>
 	</div>
 	<div class="card-reveal white-text" style="background-color : rgba(139,69,19,0.9);">
 		<span class="card-title text-darken-4">Festa Junina<i class="material-icons right">X</i></span>
-		<p>Pipipopopipipopopipipopopipipopo</p>
+		<p>Pipipopopipipopopipipopo</p>
+		
 	</div>
 </div>
 </section>

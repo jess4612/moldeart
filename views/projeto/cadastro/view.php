@@ -4,7 +4,7 @@
     <form class="row " name="cadastrar_perfil" method="POST" action="" id="" enctype="multipart/form-data" style="margin: 0">
         <div class="col l8" style="margin-bottom: 1em; margin-left: 0em;">
             <div class="row container" style="margin: auto;">
-                <h5 class="">Cadastrar Projeto</h5>
+                <h5 class=""><i>Cadastrar Projeto</i></h5>
 
                 <div class="input-field col s12">
                     <input type='text' name='nome' class='validate' value="" required>

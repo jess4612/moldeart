@@ -8,5 +8,5 @@ $background = 'rgb(245,222,179)';
 //includes
 include RAIZ . '/views/_includes/header.php';
 include RAIZ . '/views/_includes/cabecalho_folha.php';
-include RAIZ . '/views/projeto/venda/view.php';
+include RAIZ . '/views/produto/venda/view.php';
 include RAIZ . '/views/_includes/footer.php';
