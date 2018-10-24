@@ -1,6 +1,6 @@
 <?php
 namespace Connection;
-use \CaioCorrea\Connection\DatabaseException;
+use \Connection\DatabaseException;
 /**
  * BasicConnection - Operacoes basicas para a conexão com a base de dados
  * 
@@ -75,10 +75,10 @@ class BasicConnection
      */
     function __construct(
         string $database, 
-        string $username,
-        string $password,
-        string $hostname,
-        string $charset
+        string $username = 'root',
+        string $password = '',
+        string $hostname = 'localhost',
+        string $charset = 'utf8'
     ) {
         $this->username = $username;
         $this->password = $password;

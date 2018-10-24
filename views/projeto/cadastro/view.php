@@ -1,32 +1,32 @@
 <?php if(!defined('RAIZ')) exit(); ?>
 <style type="text/css">
-figure figcaption {
-    line-height: 2.3em;
-    text-align: center;
-    color: white;
-}
-figure {
-    cursor: pointer;
-    margin-top: 5em !important;
-    height: 135px;
-    text-align: center;
-}
+    figure figcaption {
+        line-height: 2.3em;
+        text-align: center;
+        color: white;
+    }
+    figure {
+        cursor: pointer;
+        margin-top: 5em !important;
+        height: 135px;
+        text-align: center;
+    }
 
-figure:hover figcaption {
-    box-shadow: 2px 2px 2px #9c5a29;
-}
+    figure:hover figcaption {
+        box-shadow: 2px 2px 2px #9c5a29;asiatica
+    }
 
-figure .responsive-img {
-    max-height: 100% !important;
-}
+    figure .responsive-img {
+        max-height: 100% !important;
+    }
 
 
-#saveProject {
-    margin-top: 0.2em;
-    margin-right: 0.3em;
-    margin-bottom: 1em;
-    display: none;
-}
+    #saveProject {
+        margin-top: 0.2em;
+        margin-right: 0.3em;
+        margin-bottom: 1em;
+        display: none;
+    }
 </style>
 
 <button class="hide" id="editor"></button>
@@ -34,6 +34,7 @@ figure .responsive-img {
 <!-- Icone de loading -->
 <div class="hide" id="newStep">
     <input type="hidden" id="loadDataUrl" value="<?=INDEX?>/novo_projeto/novo_passo">
+
     <div class="loading" id="loading">
         <div class="preloader-wrapper big active">
             <div class="spinner-layer" style="border-color: black !important;">
@@ -51,7 +52,24 @@ figure .responsive-img {
 
 <div class="container">
     <section class="row" title="Cadastrar projeto" style="background-color: rgba(179,109,59,0.7); margin-top: 0.5em; padding: 1em 2em" id="containerNovoProjeto">
+
         <?php if (empty($_SESSION['artefato'])): ?>
+        <form class="row" id="novoPasso" action="<?=INDEX?>/novo_projeto/novo_passo" method="post" style="display: none;">
+            <h4 class="flow-text">Novo Passo</h4>
+            <div class="input-field col s12 l8">
+                <textarea class="materialize-textarea" name="descPasso" id="descPasso" style="min-height: 125px" required></textarea>
+                <label>Descrição</label>
+            </div>
+            <div class="col l4" id="img_btn">
+                <figure class="input-field col s10 push-s1" style="margin: 0 !important" onclick="document.getElementById('imgNew').click()">
+                    <input type="file" name="img_passo" id="imgNew" class="hide img" onchange="changeDemo('img_demo0', this)" accept="image/jpeg, image/jpg, image/png" required>
+                    <img src="<?=URL_IMG?>/background/florBg.jpg" class="responsive-img" id="img_demo0">
+                    <figcaption class="molde-brown">Capa do projeto</figcaption>
+                </figure>
+            </div>
+        </form>
+
+
         <form method="POST" action="<?=INDEX?>/novo_projeto" new-action="<?=INDEX?>/novo_projeto/novo_passo" id="formCadastrarProjeto" enctype="multipart/form-data" btn-id="btnNovoProjeto">
             <div class="col l8" style="margin-bottom: 1em; margin-left: 0em;">
                 <div class="row container" style="margin: auto;">
@@ -81,6 +99,12 @@ figure .responsive-img {
                         <span class="helper-text">Tags são palavras chaves que representem seu projeto nas buscas, separe-as por vírgulas.</span>
                     </div>
 
+                    <div class="input-field col s12">
+                        <textarea class="materialize-textarea" class="validate" name="materiais" required></textarea>
+                        <label>Materiais necessários</label>
+                        <span class="helper-text">A cada elemento listado, aperte a tecla ENTER</span>
+                    </div>
+
                     <button type="submit" class="btn molde-brown col s10 push-s1 l6 push-l3" id="btnNovoProjeto">
                         Cadastrar
                     </button>
@@ -95,7 +119,7 @@ figure .responsive-img {
             </div>
         </form>
         <?php else: ?>
-            <?= $_SESSION['artefato']->forms(); ?>
+        <?= $_SESSION['artefato']->forms(); ?>
         <?php endif ?>
     </section>
 

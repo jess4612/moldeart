@@ -12,6 +12,7 @@ class Artefato
     private $descricao;
     private $tags;
     private $image;
+    private $materiais;
 
     private $data;
     private $cod;
@@ -47,6 +48,12 @@ class Artefato
 
         if (empty($this->image)) {
             return 'Envie uma imagem.';
+        }
+
+        if (empty($this->materiais)) {
+            return 'Informe os materiais necessários, por favor.';
+        } else {
+            $this->materiais = explode(PHP_EOL, $this->materiais);
         }
 
         $this->image['nomeImagem'] = time() . '.' . $type;
@@ -197,8 +204,8 @@ class Artefato
             // Salvar no banco de dados
             $con = new Connection('MoldeArt');
 
-            $query = 'INSERT INTO E_Artefato(ART_NOME, ART_CATEGORIA, ART_IMAGEM, ART_TUTORIAL, ART_DATA, ART_TAGS, ART_DESCRICAO, USU_COD)';
-            $query .= ' VALUES (@nomeVAR, @categVAR, @imgVAR, @tutorialVAR, @dataVAR, @tagsVAR, @descVAR, @userVAR)';
+            $query = 'INSERT INTO E_Artefato(ART_NOME, ART_CATEGORIA, ART_IMAGEM, ART_TUTORIAL, ART_DATA, ART_TAGS, ART_DESCRICAO, USU_COD, ART_MATERIAIS)';
+            $query .= ' VALUES (@nomeVAR, @categVAR, @imgVAR, @tutorialVAR, @dataVAR, @tagsVAR, @descVAR, @userVAR, @matVAR)';
 
             $vars = array(
                 '@nomeVAR' => $this->nome,
@@ -208,7 +215,8 @@ class Artefato
                 '@dataVAR' => $this->data,
                 '@tagsVAR' => $this->tags,
                 '@descVAR' => $this->descricao,
-                '@userVAR' => $_SESSION['userdata']->getCod()
+                '@userVAR' => $_SESSION['userdata']->getCod(),
+                '@matVAR' => serialize($this->materiais)
             );
 
             $con->dbExec($query, $vars);
@@ -284,6 +292,10 @@ class Artefato
     {
         return $this->dono;
     }
+    public function getMateriais()
+    {
+        return $this->materiais;
+    }
 
     /**
      * Setters
@@ -307,6 +319,10 @@ class Artefato
     public function setImage($image)
     {
         $this->image = $image;
+    }
+    public function setMateriais($materiais)
+    {
+        $this->materiais = $materiais;
     }
     public function novoPasso($passo)
     {
