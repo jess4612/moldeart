@@ -79,9 +79,9 @@ class Artefato
 
             try {
                 // Mover imagem
-                // $up = PATH_VIEWS . '/_upload/' . $this->image['nomeImagem'];
-                // move_uploaded_file($this->image['tmp_name'], $up);
-                // chmod($up, 775);
+                $up = PATH_VIEWS . '/_upload/tmp/' . $this->image['nomeImagem'];
+                move_uploaded_file($this->image['tmp_name'], $up);
+                chmod($up, 775);
 
                 return 'OK';
             } catch (Exception $e) {
@@ -195,12 +195,13 @@ class Artefato
     {
         try {
             // Mover imagens
+            $up = PATH_VIEWS . '/_upload';
             foreach ($this->passos as $key => $passo) {
                 unset($this->passos[$key]['image']);
-                $up = PATH_VIEWS . '/_upload/';
-                copy("{$up}/tmp/{$passo['nomeImg']}", "{$up}/{$passo['nomeImg']}");
+                copy("{$up}/tmp/{$this->image['nomeImagem']}", "{$up}/{$this->image['nomeImagem']}");
             }
-
+            copy("{$up}/tmp/{$passo['nomeImg']}", "{$up}/{$passo['nomeImg']}");
+            
             // Salvar no banco de dados
             $con = new Connection('MoldeArt');
 

@@ -18,6 +18,7 @@ define('INDEX', "http://localhost/moldeart");
 define('URL_VIEWS', INDEX . '/views');
 
 define('URL_IMG', INDEX . '/views/_img');
+define('URL_UPLOAD', INDEX . '/views/_upload');
 
 define('PATH_VIEWS', RAIZ . '/views');
 
