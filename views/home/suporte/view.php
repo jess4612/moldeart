@@ -4,9 +4,10 @@
     text-align: justify;
 }
 </style>
-<main class="row container" style="background-color: rgba(179,109,59,0.7); margin-top: 0.5em; padding: 1em 2em">
+<!-- background-color: rgba(179,109,59,0.7) -->
+<main class="row container" style="background-color: rgb(222, 184, 135); margin-top: 0.5em; padding: 1em 2em">
     <section title="Quem somos" class="col s12 l7">
-        <h5>Quem somos</h5>
+        <h5><i>Quem somos</i></h5>
         <p class="flow-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
             tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
             quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
@@ -16,7 +17,7 @@
     </section>
 
     <form method="post" action="" class="col s12 l4 right">
-        <h5>Fale conosco</h5> <br />
+        <h5><i>Fale conosco</i></h5><br/>
 
         <div class="input-field">
             <input type="text" name="assunto" style="border-color: rgb(139,69,19);">

@@ -1,32 +1,22 @@
 <?php
-// Incluir configuracoes e arquivo para carregamento de classes
+// Incluir configurações e arquivo 
 include 'conf.php';
 include 'Autoload.php';
 
-// Inicia a sessão aqui, é importante inicia-la aqui e nao em cada view, pois tornaria o codigo mais confuso e baguncado, iniciando aqui reduz-se as preocupacoes e podemos usar a variavel
-//  $_SESSION
-// com mais liberdade
+// Iniciar sessão
 session_start();
 
-
-// Testa se o diretorio solicitado por $_GET['path'] NAO EXISTE
-// Se a condicao for verdadeira ele mostra um erro de not found
-// Se a condicao for falsa ele inclui o arquivo solicitado
-
-// Importante: O nome enviado pela url amigavel é o nome da PASTA onde estao os
-// arquivos da view ou de processamento solicitados, entao o codigo trata isso
-// concatenando o conteudo da url com os nomes padrao dos arquivos.
+// Testa se o diretorio solicitado por $_GET['path'] NAO EXISTE, se a condicao for verdadeira ele mostra um erro de not found,se a condicao for falsa ele inclui o arquivo solicitado
 if (!empty($_GET['path']) and 
 	!file_exists(RAIZ . '/views/' . $_GET['path'] . '/script.php') and
 	!file_exists(RAIZ . '/php/processos/' . $_GET['path'] . '/run.php')
 ) {
 	echo 'Error 404 - Not found';
 } else {
-    // Se nada for informado na $_GET['path'], o path padrao é 'login' pois é a pagina inicial padrao
+    // Se nada for informado na $_GET['path'], o path padrao é 'login'
 	$path = empty($_GET['path']) ? 'usuario/login' : $_GET['path'];
 
-    // Cria array com dois indices, um é o arquivo de processamento(caso seja solicitado um processamento)
-    // e o outro é o arquivo de view.
+    // Cria array com dois indices, um é o arquivo de processamento e o outro é o arquivo de view.
 	$paths = array(
 	    RAIZ . '/views/' . $path . '/script.php',
     	RAIZ . '/php/processos/' . $path . '/run.php'

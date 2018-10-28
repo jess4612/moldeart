@@ -1,10 +1,11 @@
 <?php include PATH_MODALS . '/confirmaEdicao.php'; ?>
 
-<main class="container">
+<main class="row container">
 
     <style type="text/css">
+
         form .input-field label {
-            color: #FFF59D;
+            color: black;
         }
 
         @media only screen and (min-width: 1024px) {
@@ -37,14 +38,12 @@
             border: 0.3em #8b4513 solid;
             margin-top: 8em;
         }
-
     </style>
-
-    <section class="row container" style="background: rgba(139,69,19,0.7); margin: auto; margin-top: 1em; margin-bottom: 1em" title="Editar Perfil">
+    <section class="row container" style="background-color: rgb(222, 184, 135); margin: auto; margin-top: 0.5em; margin-bottom: 1em" title="Editar Perfil">
         <form class="row " name="editar_perfil" method="POST" action="<?=INDEX?>/alterar_conta" id="formEditarPerfil" enctype="multipart/form-data" style="margin: 0">
             <div class="col l8" style="margin-bottom: 1em; margin-left: 0em;">
                 <div class="row container" style="margin: auto;">
-                    <h5 class="center">Meus dados</h5>
+                    <h5 class="center"><i>Meus dados</i></h5>
 
                     <div class="input-field col s12">
                         <input type='text' name='nome' class='validate' value="<?=$_SESSION['userdata']->getNome()?>">
@@ -62,13 +61,14 @@
                     </div>
 
                     <div class='input-field col s12'>
-                        <label style='color: #FFF59D; font-size: 1.3em;'>Senha:</label>
+                        <label style=' font-size: 1.3em;'>Senha:</label>
+                        <!-- color: #FFF59D; -->
                         <input type='password' name='senha' class='validate'>
                         <span style="font-size: 0.8em">Obs: Digitar sua senha aqui irá alterá-la</span>
                     </div>
 
                     <div class='input-field col s12'>
-                        <label style='color: #FFF59D; font-size: 1.3em;'>Confirma Senha:</label>
+                        <label style=' font-size: 1.3em;'>Confirma Senha:</label>
                         <input type='password' name='confirmaSenha' class='validate'>
                     </div>
                 </div>

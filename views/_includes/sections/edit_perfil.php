@@ -13,7 +13,6 @@ form .input-field label {
 }
 </style>
 
-<<<<<<< HEAD
 <section title="Editar Perfil">
 	<div class="row" style="background: rgba(139,69,19,0.7); margin-top: 1em;">
         <div class="col l4 push-l8" style="margin-top: 15em; ">
@@ -24,13 +23,11 @@ form .input-field label {
         </div>
         <div class="col l4 left" style="margin-bottom: 1em;">
           <form class="row " name="editar_perfil" method="POST" action="<link do fomulario de acesso ao BD>">
-=======
 <section class="row container" style="background: rgba(139,69,19,0.7); margin: auto; margin-top: 1em;" title="Editar Perfil">
     <form class="row " name="editar_perfil" method="POST" action="<?=INDEX?>/alterar_conta" id="formEditarPerfil" enctype="multipart/form-data">
         <div class="col l8" style="margin-bottom: 1em; margin-left: 0em;">
             <div class="row container" style="margin: auto;">
                 <h5 class="center">Meus dados</h5>
->>>>>>> 087bbc3fc6aea4fa170c9b65f00f7c746b697ce6
 
                 <div class="input-field col s12">
                     <input type='text' name='nome' class='validate' value="<?=$_SESSION['userdata']->getNome()?>">
