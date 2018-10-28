@@ -24,7 +24,7 @@
         </div>
         <div class="input-field">
             <textarea name="message" class="materialize-textarea" class="validate" required style="border-color: rgb(139,69,19)"></textarea>
-            <label style="color: rgb(139,69,19);">Menssagem:</label> 
+            <label style="color: rgb(139,69,19);">Mensagem:</label> 
         </div>
         <button class="btn-large right" style="background: rgba(139,69,19,0.7);">
             Enviar
