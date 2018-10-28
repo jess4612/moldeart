@@ -7,29 +7,41 @@
 			$('.dropdown-trigger').dropdown();
 			$('.carousel').carousel();
 			$('.modal').modal();
+			$('.tooltipped').tooltip();
 			$('select').material_select();
 		});
 
 		// Preview de imagens
-		$('#img').change(function () {
+		$('.img').change(function () {
+			var target = document.getElementById($(this).attr('target-demo'));
+
 			const arquivo = $(this)[0].files[0];
-			const fileReader = new FileReader()
+			const fileReader = new FileReader();
 
 			fileReader.onloadend = function () {
-				$('#img_demo').attr('src', fileReader.result);
+				$(target).attr('src', fileReader.result);
 			}
 
 			fileReader.readAsDataURL(arquivo);
 		});
+
+		function changeDemo(targetDemo, element) {
+			var target = document.getElementById(targetDemo);
+
+			const arquivo = $(element)[0].files[0];
+			const fileReader = new FileReader();
+
+			fileReader.onloadend = function () {
+				$(target).attr('src', fileReader.result);
+			}
+
+			fileReader.readAsDataURL(arquivo);
+		}
 	</script>
 	
 	<script type='text/javascript' src='<?=URL_VIEWS?>/_javascript/jfunctions.js'></script>
+	<script type='text/javascript' src='<?=URL_VIEWS?>/_javascript/ajax.js'></script>
 
-	<?php
-	if (!empty($_SESSION['msg'])) {
-		include PATH_MODALS . '/message.php';
-		unset($_SESSION['msg']);
-	}
-	?>
+	<?php include PATH_MODALS . '/message.php';	?>
 </body>
 </html>

@@ -2,7 +2,7 @@
 if (!defined('RAIZ')) exit();
 
 //Declarar titulo e BG
-$title = 'Produto à venda - Molde Art';
+$title = 'Produto - Molde Art';
 $background = 'rgb(245,222,179)';
 
 //includes

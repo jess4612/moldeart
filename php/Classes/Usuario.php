@@ -130,6 +130,10 @@ class Usuario
 	/**
 	 * Getters
 	 */
+	public function getCod()
+	{
+		return $this->cod;
+	}
 	public function getNome()
 	{
 		return $this->nome;

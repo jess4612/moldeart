@@ -27,7 +27,6 @@
                         <?php unset($_SESSION['msg']); ?>
                     </div>
                     <?php endif ?>
-
                     
                     <button class='btn col s6 push-s3 yellow lighten-3' style='color: #45260B'>
                         Logar

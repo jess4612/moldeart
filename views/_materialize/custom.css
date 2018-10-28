@@ -14,8 +14,18 @@ main {
 }
 
 .input-field input:focus {
-	border-color: black !important; 
-	box-shadow: 0px 1px 0px 0px #FFF59D !important; 
+    border-color: #9c5a29 !important; 
+    box-shadow: 0px 2px 2px #9c5a29 !important; 
+}
+.input-field label {
+    color: rgb(139,69,19) !important;
+    font-size: 1.2em;
+}
+
+span.helper-text {
+    position: relative;
+    top: -20px !important;
+    font-size: 0.9em;
 }
 
 /* Para o height dos elementos em um navbar não exceder o height da navbar */
@@ -29,8 +39,34 @@ nav ul li a span {
 
 .input-field input,
 .input-field textarea,
-select {
+input.select-dropdown {
     font-size: 1.4em !important;
+    color: rgb(139,69,19) !important;
     border-color: rgb(139,69,19) !important;
+}
+
+.select-wrapper .caret {
+    color: black !important;
+    right: 5% !important;
+    top: -10px !important;
+    font-size: 1em !important;
+}
+
+/* Cores */
+.molde-brown {
+    background: rgba(139,69,19,0.7) !important;
+}
+.molde-brown:hover,
+figure:hover .molde-brown {
+    background-color: #841 !important;
+}
+
+.molde-brown-text {
+    color: rgb(139,69,19) !important;
+}
+
+button.cleared {
+    background: none;
+    border: none;
     color: rgb(139,69,19);
 }
