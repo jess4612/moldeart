@@ -1,42 +1,81 @@
 <?php if (!defined('RAIZ')) exit(); ?>
-
-<style type='text/css'>
-	.divider {
-    	background-color: grey;
-	}
-
+<style type="text/css">
+    #produto {
+        background-color: rgb(222, 184, 135);
+        margin-top: 0.5em;
+        padding: 1em 2em;
+        width: 101%;
+        font-size: 1.4em;
+    }
+    p {
+        text-align: justify;
+    }
+    #buttons {
+        margin: 0;
+    }
+    .row.no-margin {
+        margin: 0;
+    }
+    .divider {
+        margin: 1em 0;
+    }
 </style>
-
 <main class="row container">
 
-<section class="row container" title="Exibir produto" style="background-color: rgb(222, 184, 135); margin-top: 0.5em; padding: 1em 2em; width: 101%; font-size: 1.4em;">
-    <!--<div class="card col s10" style="margin:1em; background-color : rgba(139,69,19,0.4);"> </div>-->
-	    <div class="col s10" style="">
-			<img class="col s7" style="margin-top: 2em;" src="<?=INDEX?>/views/_img/propagandas/presentes.png">
-			
-			<h5 class="" style="margin-top: 2em; "><i>Produto</i></h5>
-			    Nome:"Nome do produto tirado o BD"<br>
-				Categoria: "Categoria do produto tirado o BD"<br>
-				Cadastrado em: "Data do produto tirado o BD"<br>	
-				Descrição: "Descrição do produto tirado o BD"<br>
-				Tags: "Tags do produto tirado o BD"<br>
-				Visualizações: "Visualizações do produto tirado do BD"<br>
+    <section class="col s12">
+        
+        <div class="col s6">
+            <div class="row no-margin">
+                <h5>Produto</h5>
+                <img class="responsive-img" src="<?=INDEX?>/views/_img/propagandas/presentes.png">
+                <a class="btn-large molde-brown col s6">Aprenda a Fazer!</a>
+            </div>
+            <div class="divider molde-brown"></div>
+            <div class="row no-margin">
+                <div class="row no-margin">
+                    <span class="col s8">Preço:</span>
+                    <span class="col s4">R$100,00</span>
+                </div>
+                <div class="row no-margin">
+                    <span class="col s8">Estoque:</span>
+                    <span class="col s4">+8000</span>
+                </div>
+            </div>
+            <div class="divider molde-brown"></div>
+            <a class="btn-large molde-brown">Contatar Anunciante</a>
+        </div>
+        
+        <div class="col s6" style="margin-top: 3em">
+            <div class="row">
+                <strong class="col s8">Categoria</strong>
+                <span class="col s4">NomeCategoria</span>
+            </div>
+            <div class="row">
+                <strong class="col s8">Cadastrado em</strong>
+                <span class="col s4">DD/MM/AAAA</span>
+            </div>
+            <div class="row">
+                <strong class="col s12">Descrição</strong>
+                <p class="col s12 right">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</pstrong>
+            </div>
+            <div class="row">
+                <strong class="col s12">Tags</strong>
+                <p class="col s12">Lorem, ipsum, dolor, sit, amet, consectetur, adipisicing, elit, sed, do, eiusmod</p>
+            </div>
+            <div class="row">
+                <strong class="col s9">Visualizações</strong>
+                <span class="col s3 truncate" title="+8000">+8000</span>
+            </div>
+        </div>
+    </section>
 
-			<div class="btn right col s3" style="background-color: #45260B;"> Aprenda a Fazer! </div><br>
-		</div>
-		<div class="col s10" style="margin-top: 1em;">
-			<div class="divider"></div>				
-			
-			Preço: "Preço do produto tirado o BD"<br>
-			Estoque: "Qnt do produto tirado o BD"<br>
-			
-			<div class="btn right col s3" style="background-color: #45260B;"> Contatar Anunciante </div><br>
 
-			<div class="divider"></div>
-
-			<h5 class="" style="margin-top: 2em; "><i>Comentários:</i></h5>
-		</div>
-		
-</section>
-
+    <section class="col s12" style="margin-top: 1em;">
+        <h5 class="" style="margin-top: 2em; "><i>Comentários:</i></h5>
+    </section>
 </main>

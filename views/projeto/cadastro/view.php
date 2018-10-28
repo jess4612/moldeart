@@ -1,6 +1,5 @@
 <?php if(!defined('RAIZ')) exit(); ?>
 <style type="text/css">
-<<<<<<< HEAD
 figure figcaption {
     line-height: 2.3em;
     text-align: center;
@@ -13,17 +12,9 @@ figure {
     text-align: center;
 }
 
-<<<<<<< HEAD
-<section class="row container" title="Cadastrar projeto" style="background-color: rgb(222, 184, 135); margin-top: 0.5em; padding: 1em 2em">
-    <form class="row " name="cadastrar_perfil" method="POST" action="" id="" enctype="multipart/form-data" style="margin: 0">
-        <div class="col l8" style="margin-bottom: 1em; margin-left: 0em;">
-            <div class="row container" style="margin: auto;">
-                <h5 class=""><i>Cadastrar Projeto</i></h5>
-=======
 figure:hover figcaption {
     box-shadow: 2px 2px 2px #9c5a29;
 }
->>>>>>> f75eea61100173a97b7b89bed7838e82bd358ed9
 
 figure .responsive-img {
     max-height: 100% !important;
@@ -36,7 +27,6 @@ figure .responsive-img {
     margin-bottom: 1em;
     display: none;
 }
-=======
     figure figcaption {
         line-height: 2.3em;
         text-align: center;
@@ -50,7 +40,7 @@ figure .responsive-img {
     }
 
     figure:hover figcaption {
-        box-shadow: 2px 2px 2px #9c5a29;asiatica
+        box-shadow: 2px 2px 2px #9c5a29;
     }
 
     figure .responsive-img {
@@ -64,7 +54,6 @@ figure .responsive-img {
         margin-bottom: 1em;
         display: none;
     }
->>>>>>> 42a6f09eee4da2b5f66c68bd3dd0d8ef6bc25374
 </style>
 
 <button class="hide" id="editor"></button>
