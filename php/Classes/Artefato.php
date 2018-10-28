@@ -12,6 +12,7 @@ class Artefato
     private $descricao;
     private $tags;
     private $image;
+    private $materiais;
 
     private $data;
     private $cod;
@@ -49,6 +50,12 @@ class Artefato
             return 'Envie uma imagem.';
         }
 
+        if (empty($this->materiais)) {
+            return 'Informe os materiais necessários, por favor.';
+        } else {
+            $this->materiais = explode(PHP_EOL, $this->materiais);
+        }
+
         $this->image['nomeImagem'] = time() . '.' . $type;
         
         $this->descricao = str_replace(PHP_EOL, '<br>', $this->descricao);
@@ -72,9 +79,9 @@ class Artefato
 
             try {
                 // Mover imagem
-                // $up = PATH_VIEWS . '/_upload/' . $this->image['nomeImagem'];
-                // move_uploaded_file($this->image['tmp_name'], $up);
-                // chmod($up, 775);
+                $up = PATH_VIEWS . '/_upload/tmp/' . $this->image['nomeImagem'];
+                move_uploaded_file($this->image['tmp_name'], $up);
+                chmod($up, 775);
 
                 return 'OK';
             } catch (Exception $e) {
@@ -188,17 +195,18 @@ class Artefato
     {
         try {
             // Mover imagens
+            $up = PATH_VIEWS . '/_upload';
             foreach ($this->passos as $key => $passo) {
                 unset($this->passos[$key]['image']);
-                $up = PATH_VIEWS . '/_upload/';
-                copy("{$up}/tmp/{$passo['nomeImg']}", "{$up}/{$passo['nomeImg']}");
+                copy("{$up}/tmp/{$this->image['nomeImagem']}", "{$up}/{$this->image['nomeImagem']}");
             }
-
+            copy("{$up}/tmp/{$passo['nomeImg']}", "{$up}/{$passo['nomeImg']}");
+            
             // Salvar no banco de dados
             $con = new Connection('MoldeArt');
 
-            $query = 'INSERT INTO E_Artefato(ART_NOME, ART_CATEGORIA, ART_IMAGEM, ART_TUTORIAL, ART_DATA, ART_TAGS, ART_DESCRICAO, USU_COD)';
-            $query .= ' VALUES (@nomeVAR, @categVAR, @imgVAR, @tutorialVAR, @dataVAR, @tagsVAR, @descVAR, @userVAR)';
+            $query = 'INSERT INTO E_Artefato(ART_NOME, ART_CATEGORIA, ART_IMAGEM, ART_TUTORIAL, ART_DATA, ART_TAGS, ART_DESCRICAO, USU_COD, ART_MATERIAIS)';
+            $query .= ' VALUES (@nomeVAR, @categVAR, @imgVAR, @tutorialVAR, @dataVAR, @tagsVAR, @descVAR, @userVAR, @matVAR)';
 
             $vars = array(
                 '@nomeVAR' => $this->nome,
@@ -208,7 +216,8 @@ class Artefato
                 '@dataVAR' => $this->data,
                 '@tagsVAR' => $this->tags,
                 '@descVAR' => $this->descricao,
-                '@userVAR' => $_SESSION['userdata']->getCod()
+                '@userVAR' => $_SESSION['userdata']->getCod(),
+                '@matVAR' => serialize($this->materiais)
             );
 
             $con->dbExec($query, $vars);
@@ -284,6 +293,10 @@ class Artefato
     {
         return $this->dono;
     }
+    public function getMateriais()
+    {
+        return $this->materiais;
+    }
 
     /**
      * Setters
@@ -307,6 +320,10 @@ class Artefato
     public function setImage($image)
     {
         $this->image = $image;
+    }
+    public function setMateriais($materiais)
+    {
+        $this->materiais = $materiais;
     }
     public function novoPasso($passo)
     {

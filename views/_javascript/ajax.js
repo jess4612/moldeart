@@ -16,7 +16,7 @@ $(function () {
             $.ajax({
                 beforeSend: function () {
                     inSubmit = true;
-                    $('#containerNovoProjeto').text('');
+                    $('#formCadastrarProjeto').css('display', 'none');
 
                     el.setAttribute('class', 'center');
                     el.innerHTML = loadIcon;
@@ -32,20 +32,16 @@ $(function () {
                 contentType: false,
 
                 success: function (data) {
+
+                    if (data == 'OK') {
+                        $('#novoPasso').css('display', 'block');
+                        $('#buttons').css('display', 'block');
+                    } else {
+                        $('#messageContent').text(data);
+                        $('#messageModal').modal('open');
+                        $('#formCadastrarProjeto').css('display', 'block');
+                    }
                     $(el).css('display', 'none');
-
-                    // var novoForm = document.createElement('form');
-
-                    // novoForm.setAttribute('class', 'row');
-                    // novoForm.setAttribute('id', 'novoPasso');
-                    // novoForm.setAttribute('action', form.attr('new-action'));
-                    // novoForm.setAttribute('method', 'post');
-
-                    // novoForm.innerHTML = data;
-
-
-                    $('#containerNovoProjeto').append(data);
-                    $('#buttons').css('display', 'block');
                     inSubmit = false;
                 },
 
@@ -58,7 +54,7 @@ $(function () {
             return false;
         }
     });
-    
+
     $('#addStep').click(function () {
         var loadIcon = document.getElementById('loading').innerHTML;
         var el = document.createElement('div');

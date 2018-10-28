@@ -24,7 +24,7 @@
             <li><a class="active" href="<?=INDEX?>/home/suporte"> <i class="fas fa-question-circle"></i>  <span>Quem somos/Suporte</span></a></li>
             <li><a href="<?=INDEX?>/home/empresarial"><i class="fas fa-suitcase"></i> <span>Orientações empresariais</span></a></li>
             <li><a href="<?=INDEX?>/home/social"><i class="fab fa-stack-exchange"></i>  <span>Molde Social</span></a></li>
-            <li><a href="<?=INDEX?>/projeto/meus_projetos"><span>Meus projetos</span></a></li>
+            <li><a href="<?=INDEX?>/projeto/meus_projetos"><i class="fas fa-archive"></i><span>Meus projetos</span></a></li>
         </ul>
         <ul class="dropdown-content" id="dropdown1">
             <li><a class="active" href="<?=INDEX?>/home/suporte"><span>Quem somos/Suporte</span></a></li>

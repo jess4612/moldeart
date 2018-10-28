@@ -97,6 +97,39 @@ class Usuario
 		}
 	}
 
+	public function projects($filter = 'my')
+	{
+		switch ($filter) {
+			case 'my':
+				try {
+					$query = 'SELECT * FROM E_Artefato WHERE USU_COD = @usuVAR';
+					$vars = array('@usuVAR' => $this->cod);
+
+					$con = new Connection('MoldeArt');
+					$projetos = $con->dbExec($query, $vars);
+
+					if (!empty($projetos) and !isset($projetos[0])) {
+						$back = $projetos;
+						unset($projetos);
+						$projetos[0] = $back;
+					}
+
+					return $projetos;
+				} catch (Exception $e) {
+					return 'Desculpe, houve um erro interno. Contate o suporte ou tente novamente mais tarde.';
+				}
+				break;
+		}
+	}
+
+
+
+
+
+
+
+
+
 
 	/**
 	 * Setters
