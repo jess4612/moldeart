@@ -1,7 +1,6 @@
 <?php include PATH_MODALS . '/confirmaEdicao.php'; ?>
 
 <main class="row container">
-
     <style type="text/css">
 
         form .input-field label {
@@ -11,6 +10,13 @@
         @media only screen and (min-width: 1024px) {
             #img_btn {
                 margin-top: 5em;
+            }
+
+            #alterarFoto img {
+                margin-top: 6em;
+            }
+            span.alterarImagem {
+                margin-top: 6em;
             }
         }
 
@@ -23,7 +29,6 @@
             border-radius: 0 0 0.5em 0.5em;
             transition-duration: 0.5s;
             display: none;
-            margin-top: 8em;
         }
 
         #alterarFoto:hover span.alterarImagem {
@@ -36,11 +41,10 @@
             cursor: pointer;
             max-height: 200px;
             border: 0.3em #8b4513 solid;
-            margin-top: 8em;
         }
     </style>
     <section class="row container" style="background-color: rgb(222, 184, 135); margin: auto; margin-top: 0.5em; margin-bottom: 1em" title="Editar Perfil">
-        <form class="row " name="editar_perfil" method="POST" action="<?=INDEX?>/alterar_conta" id="formEditarPerfil" enctype="multipart/form-data" style="margin: 0">
+        <form class="row" name="editar_perfil" method="POST" action="<?=INDEX?>/alterar_conta" id="formEditarPerfil" enctype="multipart/form-data" style="margin: 0">
             <div class="col l8" style="margin-bottom: 1em; margin-left: 0em;">
                 <div class="row container" style="margin: auto;">
                     <h5 class="center"><i>Meus dados</i></h5>
@@ -85,5 +89,4 @@
             </a>
         </form>
     </section>
-
 </main>	

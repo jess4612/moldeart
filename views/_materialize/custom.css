@@ -70,3 +70,20 @@ button.cleared {
     border: none;
     color: rgb(139,69,19);
 }
+
+/* Navbar Superior */
+#logo_nav {
+    background: rgb(139,69,19);
+    margin: 0;
+    height: 8em !important;
+    padding-top: 1em;
+}
+
+#logo_nav a {
+    height: 100%;
+    position: relative;
+}
+
+#logo_nav a img {
+    height: 85%;
+}

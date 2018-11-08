@@ -3,8 +3,8 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Generation Time: 28-Set-2018 às 17:30
--- Versão do servidor: 5.7.23-0ubuntu0.18.04.1
+-- Generation Time: 08-Nov-2018 às 20:04
+-- Versão do servidor: 5.7.24-0ubuntu0.18.04.1
 -- PHP Version: 7.2.10-0ubuntu0.18.04.1
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
@@ -31,14 +31,23 @@ USE `MoldeArt`;
 CREATE TABLE `E_Artefato` (
   `ART_COD` int(11) NOT NULL,
   `ART_NOME` varchar(300) NOT NULL,
+  `ART_DESCRICAO` text NOT NULL,
+  `ART_MATERIAIS` text NOT NULL,
   `ART_CATEGORIA` varchar(150) NOT NULL,
   `ART_IMAGEM` varchar(500) NOT NULL,
   `ART_TUTORIAL` text NOT NULL,
   `ART_DATA` date NOT NULL,
   `ART_TAGS` text NOT NULL,
-  `ART_VIEWS` bigint(20) NOT NULL,
+  `ART_VIEWS` bigint(20) NOT NULL DEFAULT '0',
   `USU_COD` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Extraindo dados da tabela `E_Artefato`
+--
+
+INSERT INTO `E_Artefato` (`ART_COD`, `ART_NOME`, `ART_DESCRICAO`, `ART_MATERIAIS`, `ART_CATEGORIA`, `ART_IMAGEM`, `ART_TUTORIAL`, `ART_DATA`, `ART_TAGS`, `ART_VIEWS`, `USU_COD`) VALUES
+(2, 'Vaso de flores', 'Vaso de flores com aparência semelhante a de um vaso de flores. Parece-se com um vaso de flores e se trata de um recipiente que possui, como função principal \r<br>o armazenamento de flores e terra, que sujará sua casa quando seu neto acertar a bola nele.', 'a:3:{i:0;s:17:\"1 Vaso de flores\r\";i:1;s:13:\"2kg de terra\r\";i:2;s:25:\"Flores que você preferir\";}', 'Decoração', '1541714037.jpeg', 'a:3:{i:0;a:2:{s:9:\"descricao\";s:83:\"Decore da forma como desejar o vaso à sua escolha antes de inserir qualquer coisa.\";s:7:\"nomeImg\";s:15:\"1541714048.jpeg\";}i:1;a:2:{s:9:\"descricao\";s:108:\"Adicione a terra ao interior do vaso, tome cuidado para não estragar a decoração ou sujar muito ao redor.\";s:7:\"nomeImg\";s:15:\"1541714058.jpeg\";}i:2;a:2:{s:9:\"descricao\";s:104:\"Escolha suas flores e plante-as no vaso, agora basta esperá-las crescer para o seu neto quebrar o vaso.\";s:7:\"nomeImg\";s:15:\"1541714075.jpeg\";}}', '2018-11-08', 'a:5:{i:0;s:4:\"vaso\";i:1;s:6:\"flores\";i:2;s:4:\"flor\";i:3;s:10:\"prateleira\";i:4;s:5:\"terra\";}', 0, 1);
 
 -- --------------------------------------------------------
 
@@ -78,7 +87,7 @@ CREATE TABLE `E_Usuario` (
 --
 
 INSERT INTO `E_Usuario` (`USU_COD`, `USU_NOME`, `USU_SOBRENOME`, `USU_IMAGEM`, `USU_EMAIL`, `USU_SENHA`) VALUES
-(1, 'Caio', 'Corrêa Chaves', '1538166295.png', 'caio.chaves@etec.sp.gov.br', '24c5e3161169356af8689aac778bf1c5'),
+(1, 'Caio', 'Corrêa Chaves', '1541108206.jpeg', 'caio.chaves@etec.sp.gov.br', '24c5e3161169356af8689aac778bf1c5'),
 (2, 'Melissa', 'Corrêa Chaves', 'default-user-img.png', 'melissa@email.com', 'f5bb0c8de146c67b44babbf4e6584cc0');
 
 -- --------------------------------------------------------
@@ -137,7 +146,7 @@ ALTER TABLE `R_Compra`
 -- AUTO_INCREMENT for table `E_Artefato`
 --
 ALTER TABLE `E_Artefato`
-  MODIFY `ART_COD` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `ART_COD` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 --
 -- AUTO_INCREMENT for table `E_Produto`
 --

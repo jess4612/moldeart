@@ -1,5 +1,9 @@
 <?php if (!defined('RAIZ')) exit(); ?>
 <style type="text/css">
+    main {
+        background: #deb887;
+    }
+
     #produto {
         background-color: rgb(222, 184, 135);
         margin-top: 0.5em;

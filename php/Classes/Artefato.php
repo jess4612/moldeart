@@ -117,7 +117,7 @@ class Artefato
                     <figure class="input-field col s10 push-s1" style="margin: 0 !important" onclick="document.getElementById(\'imgNew\').click()">
                         <input type="file" name="img_passo" id="imgNew" class="hide img" onchange="changeDemo(\'img_demo0\', this)" accept="image/jpeg, image/jpg, image/png" required>
                         <img src="'.URL_IMG.'/background/florBg.jpg" class="responsive-img" id="img_demo0">
-                        <figcaption class="molde-brown">Capa do projeto</figcaption>
+                        <figcaption class="molde-brown">Ilustração do passo</figcaption>
                     </figure>
                 </div>
             </form>
@@ -155,7 +155,7 @@ class Artefato
                     <figure class="input-field col s10 push-s1" style="margin: 0 !important" onclick="document.getElementById(\'img'.($key + 1).'\').click()">
                         <input type="file" name="img_passo" id="img'.($key + 1).'" class="hide img" onchange="changeDemo(\'img_demo'.($key + 1).'\', this)" accept="image/jpeg, image/jpg, image/png" required>
                         <img src="'.$image.'" class="responsive-img" id="img_demo'.($key + 1).'">
-                        <figcaption class="molde-brown">Capa do projeto</figcaption>
+                        <figcaption class="molde-brown">Ilustração do passo</figcaption>
                     </figure>
                 </div>
             </form>

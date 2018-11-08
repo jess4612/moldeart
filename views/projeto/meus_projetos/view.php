@@ -1,6 +1,12 @@
 <style type="text/css">
+	@media only screen and (min-width: 1200px) {
+		.card {
+			width: calc(((100% / 12) * 3) - 0.6em) !important;
+		}
+	}
+
 	.card {
-		width: calc(((100% / 12) * 3) - 0.6em) !important;
+		width: calc(((100% / 12) * 4) - 0.6em);
 		margin: 0.3em 0.3em !important;
 	}
 
@@ -36,7 +42,7 @@
 	<h5><i><center> Meus Projetos </center></i></h5>
 
 	<?php foreach ($projetos as $key => $value): ?>
-	<div class="card col s3" style="background-color : rgba(139,69,19,0.4);"  title="<?=$value['ART_NOME']?>">
+	<div class="card col" style="background-color: rgba(139,69,19,0.4);"  title="<?=$value['ART_NOME']?>">
 		<!-- -->
 		<div class="card-image waves-effect waves-block waves-light valign-wrapper">
 			<img class="activator" src="<?=URL_UPLOAD?>/<?=$value['ART_IMAGEM']?>">
@@ -65,4 +71,8 @@
 		</div>
 	</div>
 	<?php endforeach ?>
+
+	<?php if (empty($projetos)): ?>
+		Você ainda não tem projetos, <a href="<?=INDEX?>/projeto/cadastro">cadastre um agora!</a>
+	<?php endif ?>
 </section>
