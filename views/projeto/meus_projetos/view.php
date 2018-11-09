@@ -27,7 +27,7 @@
 		display: flex;
 	}
 
-	.card button {
+	.card .btn-flat {
 		margin: 1em 0;
 	}
 
@@ -67,7 +67,7 @@
 				<span class="col s4 right-align"><i class="fas fa-comments"></i></span>
 			</p>
 
-			<button class="btn-flat right col s7 green-text">Ver mais</button>
+			<a href="#!" class="btn-flat right col s7 green-text">Ver mais</a>
 		</div>
 	</div>
 	<?php endforeach ?>

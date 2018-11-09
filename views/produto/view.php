@@ -1,7 +1,8 @@
 <?php if (!defined('RAIZ')) exit(); ?>
 <style type="text/css">
-    main {
+    main section {
         background: #deb887;
+        margin-top: 1em;
     }
 
     #produto {
@@ -46,7 +47,7 @@
                 </div>
             </div>
             <div class="divider molde-brown"></div>
-            <a class="btn-large molde-brown">Contatar Anunciante</a>
+            <a class="btn-large molde-brown" style="margin-bottom: 1em">Contatar Anunciante</a>
         </div>
         
         <div class="col s6" style="margin-top: 3em">
@@ -80,6 +81,6 @@
 
 
     <section class="col s12" style="margin-top: 1em;">
-        <h5 class="" style="margin-top: 2em; "><i>Comentários:</i></h5>
+        <h5><em>Comentários</em></h5>
     </section>
 </main>

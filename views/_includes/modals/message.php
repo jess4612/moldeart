@@ -1,9 +1,9 @@
 <?php if (!defined('RAIZ')) exit(); ?>
-<div class="modal" id="messageModal">
+<div class="modal molde-brown no-hover white-text" id="messageModal">
     <div class="modal-content">
-        <h4>Aviso</h4>
-        <div class="container flow-text" id="messageContent"></div>
-        <button class="btn modal-close">Fechar</button>
+        <h4 class="center">Aviso</h4>
+        <div class="container flow-text center" id="messageContent"></div>
+        <button class="btn-flat modal-close right white-text" style="margin: 1em 0 2em 0">Fechar</button>
     </div>
 </div>
 

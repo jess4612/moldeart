@@ -56,7 +56,10 @@ input.select-dropdown {
 .molde-brown {
     background: rgba(139,69,19,0.7) !important;
 }
-.molde-brown:hover,
+.molde-brown.no-hover {
+    background: rgb(139,69,19) !important;
+}
+.molde-brown:not(.no-hover):hover,
 figure:hover .molde-brown {
     background-color: #841 !important;
 }
