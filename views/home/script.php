@@ -10,8 +10,6 @@ if (empty($_SESSION['userdata'])) {
 $title = 'Home - Molde Art';
 $background = 'rgb(245,222,179)';
 
-$_SESSION['msg'] = 'Mensagem de teste';
-
 // Incluir defaults
 include RAIZ . '/views/_includes/header.php';
 include RAIZ . '/views/_includes/cabecalho_folha.php';
