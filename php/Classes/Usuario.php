@@ -11,14 +11,16 @@ class Usuario
 	private $email;
 	private $senha;
 	private $image;
+	private $admin;
 
 	//Criando função, conjunto de comandos que podem ser chamados durante o código
-	function __construct(string $nome = '', string $sobrenome = '', string $email = '', string $senha = '')
+	function __construct(string $nome = '', string $sobrenome = '', string $email = '', string $senha = '', bool $admin)
 	{
 		//atribuindo o valor das variaveis já existentes aos atributos do objeto.
 		$this->nome = $nome;
 		$this->sobrenome = $sobrenome;
 		$this->email = $email;
+		$this->admin = $admin;
 		$this->senha = $senha;
 	}
 
@@ -183,5 +185,8 @@ class Usuario
 	{
 		return $this->image;
 	}
-
+	public function isAdmin()
+	{
+		return $this->admin;
+	}
 }

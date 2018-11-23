@@ -49,7 +49,7 @@ if (isset($_POST['email']) and isset($_POST['senha'])) {
 		$_SESSION['error'] = 'Usuário ou senha incorretos.';
 		header('Location: ' . INDEX);
 	} else {
-		$_SESSION['userdata'] = new Usuario($userData['USU_NOME'], $userData['USU_SOBRENOME'], $userData['USU_EMAIL']);
+		$_SESSION['userdata'] = new Usuario($userData['USU_NOME'], $userData['USU_SOBRENOME'], $userData['USU_EMAIL'], $userData['USU_SENHA'], $userData['USU_ADMIN']);
 		$_SESSION['userdata']->setCod($userData['USU_COD']);
 		$_SESSION['userdata']->setImage($userData['USU_IMAGEM']);
 		header('Location: ' . INDEX . '/home');
