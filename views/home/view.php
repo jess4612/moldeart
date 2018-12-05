@@ -30,7 +30,7 @@
 	<?php include PATH_SECTIONS . '/important.php';?>
 
 	<label id="tutoriais" class="col s12 flow-text black-text" style="padding: 0.3em 0.6em 0.15em 0.6em; background-color: rgb(222,184,135);">Tutoriais</label>
-	<label id="produtos" class="col s12 flow-text black-text" style="padding: 0.3em 0.6em 0.15em 0.6em; background-color: rgb(252,214,165); cursor: pointer">Produtos</label>
+	<label id="produtos" class="col s12 flow-text black-text" style="padding: 0.3em 0.6em 0.15em 0.6em; background-color: rgb(252,214,165); cursor: pointer">EM BREVE!</label>
 
 	<div id="tutoriais_content" class="row center-align" style="background-color: rgb(222,184,135); margin-top: 0 !important;">
 		<?php include PATH_SECTIONS . '/ultimos_vistos.php'; ?>

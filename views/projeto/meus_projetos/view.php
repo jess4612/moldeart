@@ -39,7 +39,7 @@
 </style>
 
 <section class="row container" title="Meus projetos" style="background-color: rgb(222, 184, 135); margin-top: 0.5em; padding: 1em 2em">
-	<h5><i><center> Meus Projetos </center></i></h5>
+	<h5><center> Meus Projetos </center></h5>
 
 	<?php foreach ($projetos as $key => $value): ?>
 	<div class="card col" style="background-color: rgba(139,69,19,0.4);"  title="<?=$value['ART_NOME']?>">
@@ -67,7 +67,7 @@
 				<span class="col s4 right-align"><i class="fas fa-comments"></i></span>
 			</p>
 
-			<a href="#!" class="btn-flat right col s7 green-text">Ver mais</a>
+			<a href="<?=INDEX?>/projeto" class="btn-flat right col s7 green-text">Ver mais</a>
 		</div>
 	</div>
 	<?php endforeach ?>

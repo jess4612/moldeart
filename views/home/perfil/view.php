@@ -42,12 +42,17 @@
             max-height: 200px;
             border: 0.3em #8b4513 solid;
         }
+
+            <!-- margin: auto; margin-top: 0.5em; margin-bottom: 1em;--> 
+
     </style>
+    <section class="col s12" style="background-color: rgb(222, 184, 135); margin-top: 0.5em; padding: 1em 2em;" title="Editar Perfil">
+        <form class="row " name="editar_perfil" method="POST" action="<?=INDEX?>/alterar_conta" id="formEditarPerfil" enctype="multipart/form-data" style="margin: 0">
     <section class="row container" style="background-color: rgb(222, 184, 135); margin: auto; margin-top: 0.5em; margin-bottom: 1em" title="Editar Perfil">
         <form class="row" name="editar_perfil" method="POST" action="<?=INDEX?>/alterar_conta" id="formEditarPerfil" enctype="multipart/form-data" style="margin: 0">
             <div class="col l8" style="margin-bottom: 1em; margin-left: 0em;">
                 <div class="row container" style="margin: auto;">
-                    <h5 class="center"><i>Meus dados</i></h5>
+                    <h5><i>Meus dados</i></h5>
 
                     <div class="input-field col s12">
                         <input type='text' name='nome' class='validate' value="<?=$_SESSION['userdata']->getNome()?>">
@@ -79,14 +84,14 @@
             </div>
             <div class="col l4" id="img_btn">
                 <div class="input-field col s10" title="Alterar Foto" id="alterarFoto">
-                    <input type="file" name="img" id="img" class="hide" accept="image/jpeg, image/jpg, image/png">
+                    <input type="file" name="img" id="img" class="hide" accept="image/jpeg, image/jpg, image/png" style="height: 5em;">
                     <img src="<?=URL_VIEWS?>/_upload/<?=$_SESSION['userdata']->getImage()?>" class="responsive-img" onclick="document.getElementById('img').click()" id="img_demo">
-                    <span class="alterarImagem">Alterar imagem</span>
-                </div>
+                    <span class="alterarImagem" style="margin-top: 0em;">Alterar imagem</span>
+                </div>  
             </div>
             <a class="btn col s10 push-s1 l5 push-l4 modal-trigger" style="background: rgba(139,69,19,0.7); margin-bottom: 2em" href="#confirmaEdicao">
                 Editar
             </a>
         </form>
     </section>
-</main>	
+</main> 

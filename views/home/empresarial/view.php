@@ -2,7 +2,7 @@
 <style type="text/css">
  
 </style>
-<main class="container">
+<main class="row container" style="background-color: rgb(208, 157, 92); margin-top: 0.5em; padding: 1em 2em; font-size: 1.5em; color: white;">
     <aside>
         <h5>Sumário</h5>
         <ul>
@@ -15,32 +15,36 @@
             <a href="#link7"><li>3. MULTAS POR EXCEDER O FATURAMENTO</li></a>
         </ul>
     </aside>
-
+    <div class="divider molde-brown"></div>
     <section>
         <p id="link1">
-            <strong class="center">MEI – MICROEMPREENDEDOR INDIVIDUAL</strong>
+            <strong class="center"><h5>MEI – MICROEMPREENDEDOR INDIVIDUAL</h5></strong>
             O MEI, também paga contribuição mensal e, também declara anualmente o faturamento do negócio. Além disso, existem outras pequenas normas para se tornar um MEI, e nesse artigo há uma leve formalização sobre o tema.
         </p>
         <p>
             O Microempreendedor Individual, é um regime tributário, dentro da categoria empresarial, que facilita a vida do pequeno empresário e estimula na sua formalização. Contudo, ser um MEI não o torna isento de impostos, ou até mesmo de prestar contas com o Fisco (conjunto de órgãos públicos responsável pela determinação e arrecadação de impostos, taxas; Ministério da Fazenda.). Estando formalizado, o MEI possui obrigações.
         </p>
+        <div class="divider molde-brown" style="height: 2px"></div>
         <p id="link2">
-            <strong class="center">1. OBRIGAÇÕES DO MEI</strong>
+            <strong class="center"><h5>1. OBRIGAÇÕES DO MEI</h5></strong>
             Possui obrigações tributárias e trabalhistas, como o pagamento da contribuição mensal e declaração anual de renda para a Receita Federal. O MEI possui impostos especiais, pois, além de pagarem um valor baixo, pagam um valor fixo. Isso é, colocando esses impostos no controle de gastos, não haverá surpresas no final do mês, ao fechar as contas. Muitos empresários, deixam de pagar essas tarifas obrigatórias, o que é perigoso, pois além de cancelar o MEI automaticamente, os débitos seguem em aberto.
         </p>
+        <div class="divider molde-brown"></div>
         <p id="link3">
-            <strong class="center">1.1 DAS (Documento de Arrecadação do Simples Nacional)</strong>
+            <strong class="center"><h5>1.1 DAS (Documento de Arrecadação do Simples Nacional)</h5></strong>
             É o meio de arrecadação da contribuição mensal, como o empresário recolherá seus impostos e pode ser realizado por meio de débito bancário, débito bancário e boleto.
         </p>
+        <div class="divider molde-brown"></div>
         <p id="link4">
-            <strong class="center">1.2 DASN-SIMEI (Declarações Anuais de Faturamento)</strong>
+            <strong class="center"><h5>1.2 DASN-SIMEI (Declarações Anuais de Faturamento)</h5></strong>
             É quando o empresário informa ao Fisco, o faturamento anual de seu negócio por meio desse documento – disponível no Portal do Empreendedor. O atraso da entrega desse documento, pode gerar uma multa mínima de R$ 50,00. A multa é gerada assim que a declaração é enviada.
         </p>
         <p>
             A contribuição mensal do MEI, consiste em R$ 47,70, podendo haver o acréscimo de R$ 1,00; R$ 5,00; ou R$ 6,00 – conforme o ramo de atividade exercido.
         </p>
+        <div class="divider molde-brown"></div>
         <p id="link5">
-            <strong class="center">CONTRIBUIÇÃO MENSAL DO MEI</strong>
+            <strong class="center"><h5>CONTRIBUIÇÃO MENSAL DO MEI</h5></strong>
             <table>
                 <tr>
                     <th>ATIVIDADE</th>
@@ -76,9 +80,9 @@
                 <li>Apresentar anualmente o RAIS (Relação Anual de Empregados) ao Ministério do Trabalho e Emprego.</li>
             </ul>
         </p>
-
+        <div class="divider molde-brown"></div>
         <p id="link6">
-            <strong class="center">2. GESTÃO DA MICROEMPRESA</strong>
+            <strong class="center"><h5>2. GESTÃO DA MICROEMPRESA</h5></strong>
             É recomendado ao MEI que organize suas finanças, separando gastos pessoais de gastos da empresa.  A analista do Sebrae/SP, Ana Roberta Amarante, alerta sobre isso:
         </p>
         <p>
@@ -86,6 +90,7 @@
         </p>
         <p>O controle financeiro de seu negócio, deve ser feito diariamente. Já que o MEI não é obrigado a contratar um contador, ele pode realizar o próprio registro dos valores que entram e saem de seu comércio. Para aquele que começa o negócio por necessidade, e não possui conhecimento de como se faz uma gestão financeira, é importante saber separar as finanças da pessoa física, daquelas que pertencem a pessoa jurídica.</p>
         <p>É aconselhado que o MEI mantenha guardado as notas fiscais emitidas em compras e vendas, arquivadas, por um prazo de cinco anos desde sua data de emissão.</p>
+        <div class="divider molde-brown"></div>
         <p id="link7">
             <strong class="center">3. MULTAS POR EXCEDER O FATURAMENTO</strong>
             Para ser MEI, o empresário não pode faturar mais que R$ 81mil por ano. Ressalta-se que faturamento – tudo o que a empresa recebe –, é completamente diferente de rendimento – os lucros da empresa, subtraindo-se com os gastos. Mesmo possuindo um limite de R$ 81 mil de faturamento anual, o MEI deve possuir uma renda mensal proporcional a cada mês, de aproximadamente R$ 6.750,00. 

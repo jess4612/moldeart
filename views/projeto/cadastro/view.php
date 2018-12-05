@@ -78,7 +78,7 @@ figure .responsive-img {
 </div>
 
 <div class="container">
-    <section class="row" title="Cadastrar projeto" style="background-color: rgba(179,109,59,0.7); margin-top: 0.5em; padding: 1em 2em" id="containerNovoProjeto">
+    <section class="row" title="Cadastrar projeto" style="background-color: rgb(222, 184, 135);       margin-top: 0.5em; padding: 1em 2em" id="containerNovoProjeto">
 
         <?php if (empty($_SESSION['artefato'])): ?>
         <form class="row" id="novoPasso" action="<?=INDEX?>/novo_projeto/novo_passo" method="post" style="display: none;">

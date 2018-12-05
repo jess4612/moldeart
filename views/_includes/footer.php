@@ -38,10 +38,18 @@
 			fileReader.readAsDataURL(arquivo);
 		}
 	</script>
-	
+	<!--
+	<footer>
+		<div class="footer-copyright" style="background: rgba(139,69,19,0.8); border-top: 2px black solid; bottom: 0; position: relative; color: white; line-height: 4em;">
+			Desenvolvido por: Jéssica Clemente e Danielle Lima
+		</div>
+	</footer>
+	-->
+
 	<script type='text/javascript' src='<?=URL_VIEWS?>/_javascript/jfunctions.js'></script>
 	<script type='text/javascript' src='<?=URL_VIEWS?>/_javascript/ajax.js'></script>
 
 	<?php include PATH_MODALS . '/message.php';	?>
+
 </body>
 </html>

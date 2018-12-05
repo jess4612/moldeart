@@ -14,7 +14,7 @@ class Usuario
 	private $admin;
 
 	//Criando função, conjunto de comandos que podem ser chamados durante o código
-	function __construct(string $nome = '', string $sobrenome = '', string $email = '', string $senha = '', bool $admin)
+	function __construct(string $nome = '', string $sobrenome = '', string $email = '', string $senha = '', bool $admin = false)
 	{
 		//atribuindo o valor das variaveis já existentes aos atributos do objeto.
 		$this->nome = $nome;
@@ -49,7 +49,7 @@ class Usuario
 				'@senhaVAR' => $this->senha
 			);
 			$con->dbExec($query,$vars);
-			return 'Obrigado por se cadastrar!';
+			return "Obrigado por se cadastrar!";
 		} catch (Exception $e) {
 			echo $e;
 			return 'Erro interno. Contate o suporte.';

@@ -7,8 +7,8 @@ if (empty($_SESSION['userdata'])) {
 
 
 //Atribuir valores especificos
-$title = 'Molde Cultural - Molde Art';
-$background = 'rgb(245,222,179)';
+$title = 'Empresarial - Molde Art';
+$background = 'rgb(250,227,184)';
 
 // Incluir defaults
 include RAIZ . '/views/_includes/header.php';

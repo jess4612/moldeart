@@ -7,6 +7,7 @@
 	<title><?=$title?></title>
 	<link rel='stylesheet' type='text/css' href='<?=URL_VIEWS?>/_materialize/css/materialize.min.css'>
 	<link rel='stylesheet' type='text/css' href='<?=URL_VIEWS?>/_materialize/custom.css'>
-	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="<?=URL_VIEWS?>/_fa/web-fonts-with-css/css/fontawesome-all.css">
+	<!--<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous"> -->
 </head>
 <body style="background:<?=$background?>">

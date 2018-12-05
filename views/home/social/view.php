@@ -14,6 +14,7 @@
 
     <h5>Bem vindo(a) ao Molde Social!!</h5>
 
+    <?php if (!empty($posts)): ?>
     <?php foreach ($posts as $key => $post): ?>
     <div class="row">
         <h5 class="col s12"><?=$post['POS_NOME']?> <span class="right"><?=implode('.', array_reverse(explode('-', $post['POS_DATA'])))?></span></h5>
@@ -27,6 +28,6 @@
             <?php endforeach ?>
         </div>
     </div>
-    <hr class="molde-brown-text">
-    <?php endforeach ?>
+
+
 </main>
