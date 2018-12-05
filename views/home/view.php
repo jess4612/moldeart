@@ -38,9 +38,7 @@
 		<?php include PATH_SECTIONS . '/mais_vistos.php'; ?>
 	</div>
 	<div id="produtos_content" class="row center-align" style="background-color: rgb(222,184,135); margin-top: 0 !important;">
-		<?php include PATH_SECTIONS . '/ultimos_vistos.php'; ?>
-		<?php include PATH_SECTIONS . '/gostar_de.php'; ?>
-		<?php include PATH_SECTIONS . '/mais_vistos.php'; ?>
+		<h5 class="center">Em breve teremos produtos a venda!</h5>
 	</div>
 </main>
 	
