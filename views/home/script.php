@@ -1,9 +1,23 @@
 <?php
-if (!defined('RAIZ')) exit();
+use \Connection\Connection;
+
+if (!defined('RAIZ')) {
+    exit();
+}
 
 if (empty($_SESSION['userdata'])) {
     header('Location: ' . INDEX . '/home');
     exit();
+}
+
+$con = new Connection('MoldeArt');
+$arts = $con->dbExec('SELECT * FROM E_Artefato LIMIT 5');
+
+if (!empty($arts) and !isset($arts[0])) {
+    $back = $arts;
+    $arts = null;
+    $arts = array(0 => $back);
+    unset($back);
 }
 
 //Atribuir valores especificos

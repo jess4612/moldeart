@@ -198,9 +198,9 @@ class Artefato
             $up = PATH_VIEWS . '/_upload';
             foreach ($this->passos as $key => $passo) {
                 unset($this->passos[$key]['image']);
-                copy("{$up}/tmp/{$this->image['nomeImagem']}", "{$up}/{$this->image['nomeImagem']}");
+                copy("{$up}/tmp/{$passo['nomeImg']}", "{$up}/{$passo['nomeImg']}");
             }
-            copy("{$up}/tmp/{$passo['nomeImg']}", "{$up}/{$passo['nomeImg']}");
+            copy("{$up}/tmp/{$this->image['nomeImagem']}", "{$up}/{$this->image['nomeImagem']}");
             
             // Salvar no banco de dados
             $con = new Connection('MoldeArt');
@@ -238,7 +238,22 @@ class Artefato
         }
     }
 
+    public function novoPasso($passo)
+    {
+        $tipo = explode('/', $passo['image']['type']);
+        $tipo = end($tipo);
+        $tmpName = explode('/', $passo['image']['type']);
+        $tmpName = end($tmpName);
+        $nomeImg = $tmpName . time() . '.' . $tipo;
 
+        // Mover imagem
+        $up = PATH_VIEWS . '/_upload/tmp/' . $nomeImg;
+        move_uploaded_file($passo['image']['tmp_name'], $up);
+        chmod($up, 775);
+
+        $passo['nomeImg'] = $nomeImg;
+        $this->passos[] = $passo;
+    }
 
 
 
@@ -325,18 +340,5 @@ class Artefato
     {
         $this->materiais = $materiais;
     }
-    public function novoPasso($passo)
-    {
-        $tipo = explode('/', $passo['image']['type']);
-        $tipo = end($tipo);
-        $nomeImg = time() . '.' . $tipo;
-
-        // Mover imagem
-        $up = PATH_VIEWS . '/_upload/tmp/' . $nomeImg;
-        move_uploaded_file($passo['image']['tmp_name'], $up);
-        chmod($up, 775);
-
-        $passo['nomeImg'] = $nomeImg;
-        $this->passos[] = $passo;
-    }
+    
 }
