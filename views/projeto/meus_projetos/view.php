@@ -67,7 +67,7 @@
 				<span class="col s4 right-align"><i class="fas fa-comments"></i></span>
 			</p>
 
-			<a href="<?=INDEX?>/projeto" class="btn-flat right col s7 green-text">Ver mais</a>
+			<a href="<?=INDEX?>/projeto?cod=<?=$value['ART_COD']?>" class="btn-flat right col s7 green-text">Ver mais</a>
 		</div>
 	</div>
 	<?php endforeach ?>
